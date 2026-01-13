@@ -1,0 +1,312 @@
+/* Page background (same family as login) */
+body.app {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(160deg,
+        rgba(19, 19, 94, 1) 8%,
+        rgba(66, 66, 179, 1) 35%,
+        rgba(141, 186, 214, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Center content */
+/*.page-wrapper {
+    min-height: calc(100vh - 60px); /* header height */
+    /*display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}*/
+.page-wrapper {
+    margin-left: 220px;   /* sidebar width */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Card (same idea as login-card) */
+.skill-card {
+    background: white;
+    width: 85%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    color: #1e293b;
+}
+
+/* Heading */
+.skill-card h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table */
+.skill-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skill-table th {
+    background: #3b82f6;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.skill-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.skill-table tr:hover {
+    background: #f8fafc;
+}
+
+/* Empty row */
+.skill-table .empty {
+    text-align: center;
+    color: #64748b;
+}
+
+/* Buttons */
+.btn-primary {
+    padding: 6px 14px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+/* Back link */
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 600;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: white;
+    padding: 20px 15px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+.sidebar a.active {
+    background: #2c3e50;
+    color: white;
+}
+
+.logo1-img {
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+
+/* Profile card */
+.profile-card {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Banner */
+.profile-banner {
+    height: 160px;
+    background: linear-gradient(135deg, #4f46e5, #60a5fa);
+}
+
+/* Header */
+.profile-header {
+    text-align: center;
+    padding: 0 20px 20px;
+    margin-top: -60px;
+}
+
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    background: #e5e7eb;
+}
+
+.profile-header h2 {
+    margin: 10px 0 4px;
+}
+
+.profile-meta {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #2563eb;
+}
+
+.stat-box span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Form */
+.profile-form {
+    padding: 25px;
+}
+
+.profile-form label {
+    display: block;
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+.profile-form button {
+    margin-top: 25px;
+    width: 100%;
+}
+.profile-avatar-icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 4px solid white;
+}
+
+.profile-avatar-icon i {
+    font-size: 48px;
+    color: #64748b;
+}
+/* Popup overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+/* Popup box */
+.popup-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.popup-box h3 {
+    margin-bottom: 10px;
+}
+
+.popup-box button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===============================
+   Recommendation list (API based)
+   =============================== */
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skill-row b {
+    font-size: 16px;
+    color: #1e293b;
+}
+
+.skill-row .category {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #64748b;
+}
+.skill-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+

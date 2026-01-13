@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class RegisterServlet extends HttpServlet {
+
+    // 1️⃣ Show REGISTER page
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -17,6 +19,8 @@ public class RegisterServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/views/register.jsp")
                 .forward(request, response);
     }
+
+    // 2️⃣ Handle REGISTER form submission
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -27,6 +31,7 @@ public class RegisterServlet extends HttpServlet {
         user.setPassword(request.getParameter("password"));
         user.setRole("student");
         user.setBranch(request.getParameter("branch"));
+
         String yearStr = request.getParameter("year");
         user.setYear(yearStr == null || yearStr.isEmpty() ? 0 : Integer.parseInt(yearStr));
 
@@ -36,11 +41,12 @@ public class RegisterServlet extends HttpServlet {
         boolean success = dao.registerUser(user);
 
         if (success) {
-            request.getRequestDispatcher("/WEB-INF/views/login.jsp")
-                    .forward(request, response);
-
+            // 🔑 REDIRECT, not forward
+            response.sendRedirect(request.getContextPath() + "/login");
         } else {
-            response.getWriter().println("Registration Failed");
+            request.setAttribute("error", "Registration Failed");
+            request.getRequestDispatcher("/WEB-INF/views/register.jsp")
+                    .forward(request, response);
         }
     }
 }

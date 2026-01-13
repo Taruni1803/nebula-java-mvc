@@ -1,0 +1,205 @@
+body.public {
+    margin: 0;
+    background: #13135e;
+    background: linear-gradient(160deg, rgba(19, 19, 94, 1) 8%, rgba(66, 66, 179, 1) 35%, rgba(141, 186, 214, 1) 100%);
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;   /* 🔑 prevents repetition */
+        background-size: cover;          /* 🔑 stretches once */
+        background-attachment: fixed;
+}
+.navbar {
+    background-color:white;
+    height:50px;
+    display: flex;
+    flex-direction: row;          /* 🔑 force horizontal */
+    justify-content: space-between;
+    align-items: center;          /* 🔑 vertical alignment */
+    padding: 12px 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.logo1{
+display: flex;
+    align-items:center;
+    padding-top:5px;
+    padding-bottom:100px;
+    height: 50px;
+}
+.logo1-img {
+    height: 300px;                 /* change freely */
+    width: 300px;
+    object-fit: contain;
+}
+/* ===== NAV LINKS ===== */
+.nav-links {
+    display: flex;        /* 🔑 */
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;  /* 🔑 prevents wrapping */
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #4496c1;
+
+}
+
+/* ===== PAGE CONTENT ===== */
+/*.container {
+    max-width: 1100px;
+    margin: 0 auto;        /* center content */
+   /* padding: 30px;
+    color: white;
+}*/
+.container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 30px;
+    color: white;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 6px;
+    flex: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+/* Center wrapper */
+.login-wrapper {
+    min-height: calc(10vh - 60px); /* navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login card */
+.login-card {
+    background: white;
+    color: #1e293b;
+    width: 380px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Head */
+.login-card h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Inputs */
+.login-card label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Button */
+.login-card button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: #2563eb;
+}
+
+/* Register link */
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ===== SKILL CARD ===== */
+.skill-card {
+    padding: 25px;
+    border-radius: 12px;
+     border: 1.5px solid #cbd5e1;   /* 🔑 CARD BORDER */
+
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== SKILLS TABLE WITH BORDERS ===== */
+.skill-table {
+    width: 100%;
+    border-collapse: collapse;   /* 🔑 merges borders cleanly */
+    margin-top: 10px;
+    border: 1px solid #d1d5db;   /* outer table border */
+}
+
+.skill-table th,
+.skill-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid #d1d5db;   /* 🔑 cell borders */
+}
+
+/* Header styling */
+.skill-table thead {
+    background: #1e293b;
+    color: white;
+}
+
+.skill-table th {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Row hover */
+.skill-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+/* Checkbox alignment */
+.skill-table input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+/* ===== ACTION BAR ===== */
+.action-bar {
+    margin-top: 25px;
+    text-align: right;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.primary-btn {
+    background: #3b82f6;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(59,130,246,0.35);
+}
+
+.primary-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}

@@ -47,4 +47,106 @@
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>SelectSkillServlet</servlet-name>
+    <servlet-class>com.nebula.controller.SelectSkillServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SelectSkillServlet</servlet-name>
+    <url-pattern>/select-skills</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddSkillServlet</servlet-name>
+    <servlet-class>com.nebula.controller.AddSkillServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AddSkillServlet</servlet-name>
+    <url-pattern>/add-skill</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateSkillStatusServlet</servlet-name>
+    <servlet-class>com.nebula.controller.UpdateSkillStatusServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UpdateSkillStatusServlet</servlet-name>
+    <url-pattern>/update-skill-status</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RemoveSkillServlet</servlet-name>
+    <servlet-class>com.nebula.controller.RemoveSkillServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RemoveSkillServlet</servlet-name>
+    <url-pattern>/remove-skill</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ProfileServlet</servlet-name>
+    <servlet-class>com.nebula.controller.ProfileServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ProfileServlet</servlet-name>
+    <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+
+
+
+  <!-- ✅ Force Tomcat to serve static resources
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/assets/*</url-pattern>
+  </servlet-mapping>
+-->
+
+  <!-- ================= RECOMMEND PAGE ================= -->
+  <servlet>
+    <servlet-name>RecommendPageServlet</servlet-name>
+    <servlet-class>com.nebula.controller.RecommendPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RecommendPageServlet</servlet-name>
+    <url-pattern>/recommend</url-pattern>
+  </servlet-mapping>
+
+  <!-- ================= RECOMMENDATION API ================= -->
+  <servlet>
+    <servlet-name>RecommendationServlet</servlet-name>
+    <servlet-class>com.nebula.controller.RecommendationServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RecommendationServlet</servlet-name>
+    <url-pattern>/api/recommendations</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SkillGapServlet</servlet-name>
+    <servlet-class>com.nebula.controller.SkillGapServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SkillGapServlet</servlet-name>
+    <url-pattern>/api/skill-gap</url-pattern>
+  </servlet-mapping>
+
+  <!-- ✅ Streak API -->
+  <servlet>
+    <servlet-name>StreakServlet</servlet-name>
+    <servlet-class>com.nebula.controller.StreakServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>StreakServlet</servlet-name>
+    <url-pattern>/api/streak</url-pattern>
+  </servlet-mapping>
+
 </web-app>
